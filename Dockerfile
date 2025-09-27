@@ -1,6 +1,6 @@
-FROM python:3.10-bookworm
+FROM python:3.13-bookworm
 
-ENV SALT_VERSION=3006.10
+ENV SALT_VERSION=3007.8
 ENV TZ="Asia/Shanghai"
 
 RUN groupadd -g 450 salt && useradd -u 450 -g salt -s /bin/sh -M salt \

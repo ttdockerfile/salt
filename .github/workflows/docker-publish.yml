@@ -15,7 +15,7 @@ on:
 
 env:
   IMAGE_NAME: "buyfakett/salt"
-  IMAGE_TAG: "3006.10-python3.10"
+  IMAGE_TAG: "3007.8-python3.13"
 
 jobs:
   docker:
