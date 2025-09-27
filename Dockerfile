@@ -13,7 +13,7 @@ RUN groupadd -g 450 salt && useradd -u 450 -g salt -s /bin/sh -M salt \
 RUN apt-get update && apt-get install -y dumb-init && rm -rf /var/lib/apt/lists/*
 
 RUN echo "cython<3" > /tmp/constraint.txt && \
-pip install --no-cache-dir setuptools wheel && \
+pip install --no-cache-dir setuptools wheel tornado jinja2 pycryptodomex && \
 PIP_CONSTRAINT=/tmp/constraint.txt USE_STATIC_REQUIREMENTS=1 pip3 install --no-build-isolation --no-cache-dir salt=="${SALT_VERSION}" && \
 su - salt -c 'salt-run salt.cmd tls.create_self_signed_cert'
 
